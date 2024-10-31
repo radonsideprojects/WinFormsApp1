@@ -1,17 +1,22 @@
-namespace WinFormsApp1
+﻿namespace WinFormsApp1
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            // Не дозволяє програмі запуститися два раза
+
+            Mutex mutex = new Mutex(false, "TheFunnyAppLol");
+            if (mutex.WaitOne(0, false))
+            {
+                ApplicationConfiguration.Initialize();
+                Application.Run(new Forms.GreetingWindow());
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

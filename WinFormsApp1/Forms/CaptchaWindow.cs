@@ -5,9 +5,11 @@ namespace WinFormsApp1.Forms
 {
     public partial class CaptchaWindow : Form
     {
+        private int soundCount;
         public CaptchaWindow()
         {
             InitializeComponent();
+            soundCount = 0;
         }
 
         private void CaptchaWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -32,9 +34,30 @@ namespace WinFormsApp1.Forms
             button1.Enabled = false;
             byte[][] sounds = new byte[3][];
 
-            sounds[0] = Properties.Resources.noise2;
-            sounds[1] = Properties.Resources.drum1;
-            sounds[2] = Properties.Resources.phone;
+            switch (soundCount)
+            {
+                case 0:
+                    sounds[0] = Properties.Resources.noise2;
+                    sounds[1] = Properties.Resources.drum1;
+                    sounds[2] = Properties.Resources.phone;
+                    soundCount++;
+                    break;
+                case 1:
+                    sounds[0] = Properties.Resources.noise;
+                    sounds[1] = Properties.Resources.ting;
+                    sounds[2] = Properties.Resources.drum2;
+                    soundCount++;
+                    break;
+                case 2:
+                    sounds[0] = Properties.Resources.drum3;
+                    sounds[1] = Properties.Resources.wuuuuuuuuu;
+                    sounds[2] = Properties.Resources.random;
+                    soundCount++;
+                    break;
+                default:
+                    break;
+
+            };
 
             await playSoundAsync(sounds);
             button1.Enabled = true;

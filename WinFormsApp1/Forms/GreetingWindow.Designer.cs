@@ -31,9 +31,9 @@
             textBox1 = new TextBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            textBox2 = new TextBox();
-            linkLabel1 = new LinkLabel();
             button1 = new Button();
+            linkLabel1 = new LinkLabel();
+            textBox2 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             label1.Name = "label1";
             label1.Size = new Size(350, 59);
             label1.TabIndex = 1;
-            label1.Text = "Title";
+            label1.Text = "UniChat";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // groupBox1
@@ -68,24 +68,6 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Login";
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(105, 91);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(136, 23);
-            textBox2.TabIndex = 1;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(150, 146);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(49, 15);
-            linkLabel1.TabIndex = 2;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Register";
-            // 
             // button1
             // 
             button1.Location = new Point(105, 120);
@@ -94,6 +76,26 @@
             button1.TabIndex = 3;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(148, 155);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(48, 15);
+            linkLabel1.TabIndex = 2;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Sign Up";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(105, 91);
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.Size = new Size(136, 23);
+            textBox2.TabIndex = 1;
             // 
             // GreetingWindow
             // 
@@ -105,7 +107,8 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "GreetingWindow";
-            Text = "Title";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "UniChat | Welcome";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

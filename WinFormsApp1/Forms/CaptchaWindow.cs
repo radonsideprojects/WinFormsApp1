@@ -3,6 +3,7 @@ using System.Media;
 
 namespace WinFormsApp1.Forms
 {
+    // Captcha window shiee eeee idfk
     public partial class CaptchaWindow : Form
     {
         private int soundCount;

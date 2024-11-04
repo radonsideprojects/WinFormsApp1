@@ -42,27 +42,28 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 9);
+            label1.Font = new Font("Segoe UI Semibold", 20.2909088F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label1.Location = new Point(14, 11);
             label1.Name = "label1";
-            label1.Size = new Size(348, 37);
+            label1.Size = new Size(415, 42);
             label1.TabIndex = 0;
             label1.Text = "Confirm you are not a robot";
             // 
             // label2
             // 
-            label2.Location = new Point(12, 61);
+            label2.Location = new Point(14, 77);
             label2.Name = "label2";
-            label2.Size = new Size(348, 43);
+            label2.Size = new Size(398, 54);
             label2.TabIndex = 1;
             label2.Text = "Listen to sounds and determine which one of them is the sound of drums";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            button1.Location = new Point(12, 107);
+            button1.Location = new Point(14, 136);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(348, 32);
+            button1.Size = new Size(398, 41);
             button1.TabIndex = 2;
             button1.Text = "Play";
             button1.UseVisualStyleBackColor = true;
@@ -71,9 +72,10 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(12, 145);
+            radioButton1.Location = new Point(14, 184);
+            radioButton1.Margin = new Padding(3, 4, 3, 4);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(31, 19);
+            radioButton1.Size = new Size(35, 23);
             radioButton1.TabIndex = 3;
             radioButton1.TabStop = true;
             radioButton1.Text = "1";
@@ -82,9 +84,10 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(170, 145);
+            radioButton2.Location = new Point(194, 184);
+            radioButton2.Margin = new Padding(3, 4, 3, 4);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(31, 19);
+            radioButton2.Size = new Size(35, 23);
             radioButton2.TabIndex = 4;
             radioButton2.TabStop = true;
             radioButton2.Text = "2";
@@ -93,9 +96,10 @@
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(329, 145);
+            radioButton3.Location = new Point(376, 184);
+            radioButton3.Margin = new Padding(3, 4, 3, 4);
             radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(31, 19);
+            radioButton3.Size = new Size(35, 23);
             radioButton3.TabIndex = 5;
             radioButton3.TabStop = true;
             radioButton3.Text = "3";
@@ -103,9 +107,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 173);
+            button2.Location = new Point(14, 219);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(348, 32);
+            button2.Size = new Size(398, 41);
             button2.TabIndex = 6;
             button2.Text = "Confirm";
             button2.UseVisualStyleBackColor = true;
@@ -117,9 +122,9 @@
             // 
             // CaptchaWindow
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(376, 217);
+            ClientSize = new Size(430, 275);
             ControlBox = false;
             Controls.Add(button2);
             Controls.Add(radioButton3);
@@ -129,12 +134,14 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "CaptchaWindow";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Audio Captcha";
             FormClosing += CaptchaWindow_FormClosing;
+            Load += CaptchaWindow_Load;
             ResumeLayout(false);
             PerformLayout();
         }

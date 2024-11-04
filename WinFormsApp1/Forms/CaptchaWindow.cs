@@ -19,8 +19,10 @@ namespace WinFormsApp1.Forms
 
         private Task playSoundAsync(byte[][] sounds)
         {
-            return Task.Run(() => {
-                foreach (var sound in sounds) {
+            return Task.Run(() =>
+            {
+                foreach (var sound in sounds)
+                {
                     using (var stream = new MemoryStream(sound))
                     {
                         new SoundPlayer(stream).PlaySync();
@@ -64,6 +66,11 @@ namespace WinFormsApp1.Forms
         }
 
         private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CaptchaWindow_Load(object sender, EventArgs e)
         {
 
         }

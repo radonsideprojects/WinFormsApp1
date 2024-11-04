@@ -37,5 +37,10 @@ namespace WinFormsApp1.Forms
             textBox2.Enabled = true;
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
